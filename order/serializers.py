@@ -15,6 +15,7 @@ class OrderItemSerializer(BaseSerializer):
             'count': obj.count,
             'amount': obj.amount,
             'remark': obj.remark,
+            'status': obj.status,
             'object_id': obj.object_id,
             'app_label': obj.content_type.app_label,
             'model': obj.content_type.model,

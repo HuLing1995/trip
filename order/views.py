@@ -56,6 +56,7 @@ class OrderDetail(BaseDetailView):
     def get(self, request, *args, **kwargs):
         """ GET: 订单详情 """
         order_obj = self.get_object()
+        # 是否查询所有的信息
         data = serializers.OrderDetailSerializer(order_obj).to_dict()
         return http.JsonResponse(data)
 
